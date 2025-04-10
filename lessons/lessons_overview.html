@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lessons | Processing JavaScript V Documentation</title>
+        <script src="../node.js"></script>
+    </head>
+    <body>
+        <h1>Welcome to the Homepage!</h1>
+        <header>
+        <div id="welcome1">
+            <div id="welcome-content">
+                <p id="welcome-p">p5.js is an accessible tool for learning coding and creating art. It is a free and open-source JavaScript library developed by an inclusive and supportive community. p5.js invites artists, designers, beginners, educators, and everyone else to participate!</p>
+                <img id="welcome-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/P5.js_icon.svg/2048px-P5.js_icon.svg.png">
+            </div>
+            <p><em>Qianqian Ye introducing 600+ p5.js contributors at p5.js Community Salon. Photo credit: <b>Ziyuan Lin</b>.</em></p>
+            <img id="display-img" src="https://p5js.org/_astro/salon-2.3EpXSE7a_7QcdK.webp">
+        </div>
+        </header>
+        <main id="main-content">
+            <div id="p5-ref">
+                <p>See the p5.js library reference</p>
+                <button>Reference &LongRightArrow;</button>
+            </div>
+            <div id="p5-learn">
+                <p>Learn p5.js now!</p>
+                <button href="lessons/lessons_overview.html">&LongLeftArrow; Start</button>
+            </div>
+            <div id="p5-commune">
+                <p>See the p5.js community in action</p>
+                <button>Explore &LongRightArrow;</button>
+            </div>
+        </main>
+        <style>
+            body {
+                font-family: 'Candara';
+                background-color: #f0f0f0;
+                color: #333;
+                margin: 0;
+                padding: 20px;
+            }
+            h1 {
+                font-family: 'Cloister Black';
+                text-align: center;
+                font-size: 60px;
+                font-weight: normal;
+                color: #2c3e50;
+            }
+            #p5-ref, #p5-commune {
+                font-size: 2em;
+                font-weight: bold;
+                text-align: start;
+                background-color: #fff;
+                padding: 10px;
+                animation: fadeIn 1s ease-in-out;
+                flex: 1 1 100%; /* Take full width */
+            }
+            #p5-commune {
+                border-top: solid rgb(100, 100, 100) 1px;
+            }
+            #p5-learn {
+                border-top: solid rgb(100, 100, 100) 1px;
+                font-size: 2em;
+                font-weight: bold;
+                text-align: end;
+                background-color: #fff;
+                padding: 10px;
+                animation: fadeIn 1s ease-in-out;
+                flex: 1 1 100%; /* Take full width */
+            }
+            button {
+                width: 200px;
+                background-color: white;
+                color: black;
+                border: solid 2px black;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 20px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 40px;
+                transition: background-color 0.5s ease-out, color 0.5s ease-out, border 0.5s ease-out;
+            }
+            button:hover {
+                background-color: black;
+                color: white;
+                border: solid 2px gray;
+            }
+            #welcome1, #main-content {
+                width: 95%;
+                max-width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap; /* ✅ Allows items to move to new lines */
+                margin: 0 auto;
+                margin-top: 20px;
+                padding: 20px;
+                background-color: #fff;
+                font-size: 1.2em;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            #welcome-content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex: 1 1 100%; /* Take full width */
+                margin-bottom: 20px;
+            }
+            @keyframes fadeInLeft {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            p {
+                line-height: 1.6;
+            }
+            #welcome-img {
+                width: 175px;
+                height: 175px;
+                animation: spin 10s linear infinite, fadeIn 1s ease-in-out;
+            }
+            #display-img {
+                display: block;
+                width: 100%;           /* Or a fixed width if preferred */
+                height: 380px;         /* Set desired crop height */
+                object-fit: cover;     /* This is the crop magic */
+                object-position: center; /* Center the crop (optional) */
+                margin: 0 auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }                
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            #welcome-p {
+                font-size: 1.2em;
+                text-align: justify;
+                margin-right: 20px;
+                flex: 1;
+            }
+        </style>
+    </body>
+</html>
